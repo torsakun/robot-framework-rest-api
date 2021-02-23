@@ -10,7 +10,7 @@ Library     JSONLibrary
 ${URL} =      https://dataapi.moc.go.th/
 
 *** Test Case ***
-PC_005
+Get Data Moc
     Create Session    GetSession    ${URL}    verify=false    disable_warnings=1
     ${haeder}=    Create Dictionary    accept=application/json
     ${Response}=    Get Request    GetSession    export-commodity-countries?year=2020&month=12&com_code=333000000    headers=${haeder}    #&limit=12    
